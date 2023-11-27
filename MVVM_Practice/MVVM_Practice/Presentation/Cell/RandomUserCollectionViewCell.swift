@@ -75,6 +75,7 @@ final class RandomUserCollectionViewCell: UICollectionViewCell {
         
         labelStackView.snp.makeConstraints {            $0.leading.equalTo(profileImage.snp.trailing).offset(10)
             $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(10)
         }
     }
     

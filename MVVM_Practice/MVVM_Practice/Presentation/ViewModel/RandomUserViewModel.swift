@@ -29,7 +29,7 @@ extension RandomUserViewModel {
             RandomUserService().getRandomPerson(url: url) {
                 randomUser in
                 if let randomUser = randomUser {
-                    let newPerson = Person(name: randomUser.results[0].name.first +  randomUser.results[0].name.last, profileImage: randomUser.results[0].picture.thumbnail, emailAddress: randomUser.results[0].email)
+                    let newPerson = Person(name: randomUser.results[0].name.first + " " + randomUser.results[0].name.last, profileImage: randomUser.results[0].picture.thumbnail, emailAddress: randomUser.results[0].email)
                     print(newPerson)
                     self.person.append(newPerson)
                 }

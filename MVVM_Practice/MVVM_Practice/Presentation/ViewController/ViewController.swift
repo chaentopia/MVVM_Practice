@@ -108,8 +108,6 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RandomUserCollectionViewCell.identifier, for: indexPath) as? RandomUserCollectionViewCell else { return UICollectionViewCell() }
         let personData = randomUserViewModel.person[indexPath.row]
         cell.configCell(data: personData)
-        cell.layoutIfNeeded()
-
         return cell
     }
 }
