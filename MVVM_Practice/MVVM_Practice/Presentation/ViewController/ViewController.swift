@@ -66,9 +66,10 @@ final class ViewController: UIViewController {
         
         randomButton.do {
             $0.clipsToBounds = true
-            $0.setImage(UIImage(systemName: "shuffle.circle.fill")?.withRenderingMode(.alwaysOriginal), for: .normal)
+            $0.setImage(UIImage(systemName: "shuffle.circle.fill"), for: .normal)
             $0.tintColor = .black
-            $0.imageView?.contentMode = .scaleToFill
+            $0.contentHorizontalAlignment = .fill
+            $0.contentVerticalAlignment = .fill
         }
     }
     
