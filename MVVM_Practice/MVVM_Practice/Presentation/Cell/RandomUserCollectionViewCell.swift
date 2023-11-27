@@ -34,7 +34,7 @@ final class RandomUserCollectionViewCell: UICollectionViewCell {
     }
     
     func setStyle() {
-        self.backgroundColor = .clear
+        self.backgroundColor = .systemGray6
         
         profileImage.do {
             $0.layer.cornerRadius = self.profileImage.bounds.height / 2
@@ -68,7 +68,7 @@ final class RandomUserCollectionViewCell: UICollectionViewCell {
         }
         
         profileImage.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(10)
+            $0.leading.equalToSuperview().inset(20)
             $0.height.width.equalTo(40)
             $0.centerY.equalToSuperview()
         }

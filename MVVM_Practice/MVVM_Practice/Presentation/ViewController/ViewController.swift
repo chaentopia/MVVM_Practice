@@ -23,8 +23,6 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        randomUserViewModel.networkRandomUser()
-
         setUI()
         setCollectionView()
         setAddTarget()
@@ -41,8 +39,9 @@ final class ViewController: UIViewController {
     }
     
     @objc private func randomButtonTapped() {
-        randomUserViewModel.networkRandomUser()
-        randomUserCollectionView.reloadData()
+        randomUserViewModel.networkRandomUser {
+            self.randomUserCollectionView.reloadData()
+        }
     }
     
     private func setUI() {
@@ -62,7 +61,7 @@ final class ViewController: UIViewController {
         randomUserFlowLayout.do {
             $0.scrollDirection = .vertical
             $0.itemSize = CGSize(width: UIScreen.main.bounds.width - CGFloat(paddingValue * 2), height: 80)
-            $0.minimumLineSpacing = 0
+            $0.minimumLineSpacing = 2
         }
         
         randomButton.do {
@@ -86,7 +85,7 @@ final class ViewController: UIViewController {
         randomUserCollectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(paddingValue)
             $0.top.equalTo(homeTitleLabel.snp.bottom).offset(50)
-            $0.height.equalTo(320)
+            $0.height.equalTo(326)
         }
         
         randomButton.snp.makeConstraints {
