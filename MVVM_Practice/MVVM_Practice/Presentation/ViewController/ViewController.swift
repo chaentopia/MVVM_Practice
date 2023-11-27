@@ -19,7 +19,7 @@ final class ViewController: UIViewController {
     let randomUserFlowLayout = UICollectionViewFlowLayout()
     let randomButton = UIButton()
     
-    let paddingValue: Double = 20
+    let paddingValue: Double = 30
 
     override func viewDidLoad() {
         super.viewDidLoad()

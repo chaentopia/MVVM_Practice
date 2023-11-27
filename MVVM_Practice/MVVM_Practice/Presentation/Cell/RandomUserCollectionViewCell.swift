@@ -42,8 +42,8 @@ final class RandomUserCollectionViewCell: UICollectionViewCell {
         }
         
         labelStackView.do {
-            $0.axis = .horizontal
-            $0.spacing = 5
+            $0.axis = .vertical
+            $0.spacing = 3
         }
         
         nameLabel.do {
